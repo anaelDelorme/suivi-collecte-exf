@@ -1,5 +1,5 @@
 populate_table <- function(bucket, object){
-  
+
   # Get data from MinIO
   df <- aws.s3::s3read_using(
     FUN = arrow::read_parquet,

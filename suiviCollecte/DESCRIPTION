@@ -1,0 +1,40 @@
+Package: suiviCollecte
+Title: Suivi Collecte EXF
+Version: 0.0.0.9000
+Authors@R: 
+    person("AnaËl", "Delorme", , "anael.delorme@agriculture.gouv.fr", role = c("cre", "aut"))
+Description: App de suivi de la collecte d'EXF.
+License: MIT + file LICENSE
+Imports: 
+    arrow,
+    aws.s3,
+    bs4Dash,
+    config (>= 0.3.2),
+    dplyr,
+    DT,
+    echarts4r,
+    geojsonio,
+    glue,
+    golem (>= 0.4.1),
+    grDevices,
+    htmlwidgets,
+    janitor,
+    leaflet,
+    sf,
+    shiny (>= 1.7.5),
+    shinymanager,
+    shinythemes,
+    shinyWidgets,
+    tidyr
+Suggests: 
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+RoxygenNote: 7.2.3
