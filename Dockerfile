@@ -12,6 +12,7 @@ RUN apt-get update -y && \
                                                libudunits2-dev 
 
 RUN R -e "install.packages('shiny', repos='https://cran.rstudio.com/')"
+RUN R -e "devtools::install_version('golem', version = '0.4.1', repos='https://cran.rstudio.com/')"
 
 # Install R package and its dependencies
 RUN install2.r remotes
