@@ -8,7 +8,8 @@ RUN apt-get update -y && \
                                                libxml2-dev \
                                                gdal-bin \
                                                libgdal-dev \
-                                               libjq-dev
+                                               libjq-dev \
+                                               libudunits2-dev
 
 # Install R package and its dependencies
 RUN install2.r remotes
