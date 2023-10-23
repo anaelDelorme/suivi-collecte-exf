@@ -11,21 +11,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Install missing dependency
-        run: |
-          sudo apt-get update && sudo apt-get install -y libjq-dev
-      - name : find lib
-        run : |
-          sudo find / -name jqr.so
-      - name: Create directory for jqr
-        run: |
-          sudo mkdir -p /usr/local/lib/R/site-library/jqr/libs/
-      - name: change location lib 
-        run: |
-          sudo cp /usr/lib/x86_64-linux-gnu/libjq.so.1 /usr/local/lib/R/site-library/jqr/libs/
-      - name: symbolic link
-        run: |
-          sudo ldconfig
       - uses: actions/checkout@v2
       - name: Docker meta
         id: docker_meta
