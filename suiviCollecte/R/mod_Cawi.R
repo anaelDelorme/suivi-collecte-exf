@@ -179,9 +179,9 @@ mod_Cawi_server <- function(id){
     nombre_dossier_repondu <-
       dossier %>%
       left_join(gestion %>%
-                  select(Identifiant_dossier, ACCEPTE),
+                  select(Identifiant_dossier, ACCEPT),
                 by = "Identifiant_dossier") %>%
-      filter(ETAT_CONTROLE != 1 &  ACCEPTE == 1) %>%
+      filter(ETAT_CONTROLE != 1 &  ACCEPT == 1) %>%
       nrow()
 
     # Nombre de dossiers
