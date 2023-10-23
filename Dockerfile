@@ -9,7 +9,9 @@ RUN apt-get update -y && \
                                                gdal-bin \
                                                libgdal-dev \
                                                libjq-dev \
-                                               libudunits2-dev
+                                               libudunits2-dev 
+
+RUN R -e "install.packages('shiny', repos='https://cran.rstudio.com/')"
 
 # Install R package and its dependencies
 RUN install2.r remotes
