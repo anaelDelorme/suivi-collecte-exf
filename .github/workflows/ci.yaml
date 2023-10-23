@@ -16,7 +16,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -y libjq-dev
       - name: change location lib 
         run: |
-          sudo cp /usr/lib/x86_64-linux-gnu/libjq.so.1 /usr/local/lib/
+          sudo cp /usr/lib/x86_64-linux-gnu/libjq.so.1 /usr/local/lib/R/site-library/jqr/libs/
       - name: symbolic link
         run: |
           sudo ldconfig
