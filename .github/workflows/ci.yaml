@@ -14,9 +14,12 @@ jobs:
       - name: Install missing dependency
         run: |
           sudo apt-get update && sudo apt-get install -y libjq-dev
-      - name: Check depedency
+      - name: change location lib 
         run: |
-          sudo find / -name libjq.so.1
+          cp /usr/lib/x86_64-linux-gnu/libjq.so.1 /usr/local/lib/
+      - name: symbolic link
+        run: |
+          ldconfig
       - uses: actions/checkout@v2
       - name: Docker meta
         id: docker_meta
@@ -27,9 +30,6 @@ jobs:
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      - name: Install missing dependency
-        run: |
-          sudo apt-get update && sudo apt-get install -y libjq-dev
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
